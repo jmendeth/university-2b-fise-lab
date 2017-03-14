@@ -1,0 +1,23 @@
+Q2.3: se satura a 14.814, per tant 14.814/10 = 1.4814
+Q3.2: 118.3uV
+Q3.3: 1mV
+Q3.4: 836.1uV
+Q3.6: 38.9uV
+Q4.2: guany diferencial unitat
+Q4.3: (2-1.4546)m/10
+Q5.1: 650kHz
+Q5.2: menys d'una milèsima de decibel, per tant pràcticament la unitat i desfasament de 180 graus
+Q5.3: 880kHz
+Q6.1: guany 40dB, bw 10kHz; guany 20dB, bw 100kHz; guany 0dB, bw 650kHz
+Q6.2: la tensió de sortida no arribaria als 100V que apareixen en la simulació, l'amplificador es saturaria molt abans. es tracta d'un efecte en continua i per tant no hi surt reflexat
+Q7.1: temps pujada: 1.6448us - 1.1053us = 540ns, temps baixada: 513ns
+Q8.1: ara limita l'slew rate. màxima derivada a la sortida = 481mV/us
+Q8.2: no s'observa distorsió
+Q8.3: sí, tenen les mateixes components, és consistent amb el que s'ha observat en la questió anterior
+Q8.4: s'observa distorsió significativa
+Q8.5: derivada màxima 481mV/us, coincideix amb el que hem trobat en Q8.1. sí, a l'especificació posa 500mV/us com a valor típic per al slew rate.
+Q8.6: s'observa molta distorsió harmònica, coincideix amb el que hem observat
+Q9.1: es comporta com a integrador en la banda dels 170Hz als 75kHz
+Q9.2: guany de 60dB
+Q9.3: l'amplificador està en saturació positiva tot el temps. no s'observa transitori, dura menys d'1ns
+Q9.4: 

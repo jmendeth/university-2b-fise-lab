@@ -1,0 +1,202 @@
+
+**** 03/09/17 20:02:49 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC2-Resposta temporal"  [ C:\Users\j.mendez.orero\Desktop\Practica1\Practica1-PSpiceFiles\SCHEMATIC2\Resposta te
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Resposta temporal.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1ps 0 50fs 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC2.net" 
+
+
+
+**** INCLUDING SCHEMATIC2.net ****
+* source PRACTICA1
+V_Vee         0 VEE 15Vdc
+R_R3         0 OUT  10k TC=0,0 
+V_Vcc         VCC 0 15Vdc
+R_R1         0 N00216  1k TC=0,0 
+X_U1         0 N00216 VCC VEE OUT uA741
+C_C1         N00216 OUT  10n  TC=0,0 
+
+**** RESUMING "Resposta temporal.cir" ****
+.END
+
+**** 03/09/17 20:02:49 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC2-Resposta temporal"  [ C:\Users\j.mendez.orero\Desktop\Practica1\Practica1-PSpiceFiles\SCHEMATIC2\Resposta te
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 03/09/17 20:02:49 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC2-Resposta temporal"  [ C:\Users\j.mendez.orero\Desktop\Practica1\Practica1-PSpiceFiles\SCHEMATIC2\Resposta te
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 03/09/17 20:02:49 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC2-Resposta temporal"  [ C:\Users\j.mendez.orero\Desktop\Practica1\Practica1-PSpiceFiles\SCHEMATIC2\Resposta te
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)   14.6420  (  VCC)   15.0000  (  VEE)  -15.0000  (N00216)-79.66E-06     
+
+(X_U1.6)    -.0019 (X_U1.7)   14.7180 (X_U1.8)   14.7180 (X_U1.9)    0.0000     
+
+(X_U1.10)    -.6077                   (X_U1.11)   14.9600                       
+
+(X_U1.12)   14.9600                   (X_U1.13)    -.5939                       
+
+(X_U1.14)    -.5938                   (X_U1.53)   14.0000                       
+
+(X_U1.54)  -14.0000                   (X_U1.90)    1.5130                       
+
+(X_U1.91)   40.0000                   (X_U1.92)  -40.0000                       
+
+(X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vee       -1.667E-03
+    V_Vcc       -1.618E-03
+    X_U1.vb     -1.861E-08
+    X_U1.vc     -4.875E-05
+    X_U1.ve      2.919E-11
+    X_U1.vlim    1.513E-03
+    X_U1.vlp    -3.849E-11
+    X_U1.vln    -4.152E-11
+
+    TOTAL POWER DISSIPATION   4.93E-02  WATTS
+
+
+ERROR(ORPSIM-15138): Convergence problem in transient analysis at Time =  472.5E-18.
+         Time step =  745.0E-27, minimum allowable step size =  1.000E-24
+
+  These voltages failed to converge:
+
+    V(N00216)                 =    1.801mV  \  -699.01uV
+    V(X_U1.11)                =     11.55V  \     15.40V
+    V(X_U1.12)                =     11.55V  \     15.40V
+    V(X_U1.6)                 =     1.951V  \     1.955V
+    V(X_U1.90)                =     40.54V  \     40.66V
+    V(X_U1.10)                =  -606.78mV  \  -608.02mV
+    V(X_U1.13)                =  -592.59mV  \  -594.27mV
+    V(X_U1.14)                =  -593.22mV  \  -594.02mV
+
+  These supply currents failed to converge:
+
+    I(X_U1.egnd)              =   -52.91mA  \   -40.99mA
+    I(V_Vee)                  =    -1.882A  \   617.68mA
+    I(V_Vcc)                  =     1.877A  \  -619.97mA
+    I(X_U1.vb)                =    19.51uA  \    19.55uA
+    I(X_U1.vc)                =    -1.880A  \   618.47mA
+    I(X_U1.ve)                =     1.881A  \  -619.35mA
+    I(X_U1.vlim)              =    40.54mA  \    40.66mA
+    I(X_U1.vlp)               =  -396.78uA  \   103.02uA
+    I(X_U1.hlim)              =   396.78uA  \  -103.02uA
+
+  These devices failed to converge:
+    X_U1.dlp  X_U1.fb   
+
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  OUT)   14.6440  (  VCC)   15.0000  (  VEE)  -15.0000  (N00216)     .0018     
+
+(X_U1.6)    1.9512 (X_U1.7)   16.6710 (X_U1.8)   16.6710 (X_U1.9)    0.0000     
+
+(X_U1.10)    -.6068                   (X_U1.11)   11.5510                       
+
+(X_U1.12)   11.5510                   (X_U1.13)    -.5926                       
+
+(X_U1.14)    -.5932                   (X_U1.53)   14.0000                       
+
+(X_U1.54)  -14.0000                   (X_U1.90)   40.5360                       
+
+(X_U1.91)   40.0000                   (X_U1.92)  -40.0000                       
+
+(X_U1.99)    0.0000                   
+
+
+**** Interrupt ****

@@ -1,0 +1,9 @@
+* source PRACTICA1
+X_U1         0 N00443 VCC VEE N00356 uA741
+R_R1         N00524 N00443  1k TC=0,0 
+R_R2         N00443 N00356  1k TC=0,0 
+R_R5         0 N00356  10k TC=0,0 
+V_Vee         0 VEE 15Vdc
+V_Vcc         VCC 0 15Vdc
+V_V1         N00524 0  
++PULSE 0 -1V 1us 1ps 1ps 10us 50us

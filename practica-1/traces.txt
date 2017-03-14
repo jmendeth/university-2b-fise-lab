@@ -1,0 +1,7 @@
+q6: Vdb(r5:2) Vdb(r6:2) Vdb(u3:out)
+q7: v(r5:2)
+q8-1: v(r5:2)
+q8-2: v(r5:2) -v(v1:+)
+q8-4: v(r5:2) -v(v1:+)
+q8-5: d(v(r5:2)) d(-v(v1:+))
+q9-1: Vdb(out) ---- Vp(out)

@@ -1,0 +1,18 @@
+** Profile: "SCHEMATIC2-Resposta freqüencial"  [ C:\Users\j.mendez.orero\Desktop\Practica1\Practica1-PSpiceFiles\SCHEMATIC2\Resposta freqüencial.sim ] 
+
+** Creating circuit file "Resposta freqüencial.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 20 0.01Hz 10MegHz
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC2.net" 
+
+
+.END

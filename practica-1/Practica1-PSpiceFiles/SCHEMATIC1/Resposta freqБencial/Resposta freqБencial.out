@@ -1,0 +1,225 @@
+
+**** 03/09/17 18:15:57 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Resposta freqüencial"  [ C:\Users\j.mendez.orero\Desktop\Practica1\practica1-pspicefiles\schematic1\resposta
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Resposta freqüencial.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 50 1kHz 10MegHz
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source PRACTICA1
+X_U1         0 N00443 VCC VEE N00356 uA741
+R_R1         N00524 N00443  1k TC=0,0 
+R_R2         N00443 N00356  1k TC=0,0 
+R_R5         0 N00356  10k TC=0,0 
+V_Vee         0 VEE 15Vdc
+V_Vcc         VCC 0 15Vdc
+V_V1         N00524 0 DC 0Vdc AC 1Vac 
+V_V2         N02734 0 DC 0Vdc AC 1Vac 
+R_R3         N02734 N02730  1k TC=0,0 
+R_R4         N02730 N02706  10k TC=0,0 
+R_R6         0 N02706  10k TC=0,0 
+X_U2         0 N02730 VCC VEE N02706 uA741
+R_R7         N03963 N03959  1k TC=0,0 
+X_U3         0 N03959 VCC VEE N03935 uA741
+R_R9         0 N03935  10k TC=0,0 
+R_R8         N03959 N03935  100k TC=0,0 
+V_V3         N03963 0 DC 0Vdc AC 1Vac 
+
+**** RESUMING "Resposta freqüencial.cir" ****
+.END
+
+**** 03/09/17 18:15:57 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Resposta freqüencial"  [ C:\Users\j.mendez.orero\Desktop\Practica1\practica1-pspicefiles\schematic1\resposta
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         X_U2.dx         X_U2.dy         
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+               X_U3.dx         X_U3.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 03/09/17 18:15:57 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Resposta freqüencial"  [ C:\Users\j.mendez.orero\Desktop\Practica1\practica1-pspicefiles\schematic1\resposta
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         X_U2.qx         X_U3.qx         
+               NPN             NPN             NPN             
+       LEVEL    1               1               1            
+          IS  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75           93.75         
+          NF    1               1               1            
+          BR    1               1               1            
+          NR    1               1               1            
+         ISS    0               0               0            
+          RE    0               0               0            
+          RC    0               0               0            
+         CJE    0               0               0            
+         VJE     .75             .75             .75         
+         CJC    0               0               0            
+         VJC     .75             .75             .75         
+         MJC     .33             .33             .33         
+        XCJC    1               1               1            
+         CJS    0               0               0            
+         VJS     .75             .75             .75         
+          KF    0               0               0            
+          AF    1               1               1            
+          CN    2.42            2.42            2.42         
+           D     .87             .87             .87         
+
+
+**** 03/09/17 18:15:57 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Resposta freqüencial"  [ C:\Users\j.mendez.orero\Desktop\Practica1\practica1-pspicefiles\schematic1\resposta
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(  VCC)   15.0000  (  VEE)  -15.0000  (N00356) 118.3E-06 (N00443) 19.25E-06     
+
+(N00524)    0.0000 (N02706)     .0010 (N02730) 19.25E-06 (N02734)    0.0000     
+
+(N03935)     .0099 (N03959) 19.20E-06 (N03963)    0.0000 (X_U1.6)-13.00E-09     
+
+(X_U1.7) 123.8E-06 (X_U1.8) 123.8E-06 (X_U1.9)    0.0000 (X_U2.6)-98.33E-09     
+
+(X_U2.7)     .0010 (X_U2.8)     .0010 (X_U2.9)    0.0000 (X_U3.6)-950.4E-09     
+
+(X_U3.7)     .0100 (X_U3.8)     .0100 (X_U3.9)    0.0000 (X_U1.10)    -.6077    
+
+(X_U1.11)   14.9600                   (X_U1.12)   14.9600                       
+
+(X_U1.13)    -.5938                   (X_U1.14)    -.5938                       
+
+(X_U1.53)   14.0000                   (X_U1.54)  -14.0000                       
+
+(X_U1.90) 110.8E-06                   (X_U1.91)   40.0000                       
+
+(X_U1.92)  -40.0000                   (X_U1.99)    0.0000                       
+
+(X_U2.10)    -.6077                   (X_U2.11)   14.9600                       
+
+(X_U2.12)   14.9600                   (X_U2.13)    -.5938                       
+
+(X_U2.14)    -.5938                   (X_U2.53)   14.0000                       
+
+(X_U2.54)  -14.0000                   (X_U2.90) 199.9E-06                       
+
+(X_U2.91)   40.0000                   (X_U2.92)  -40.0000                       
+
+(X_U2.99)    0.0000                   (X_U3.10)    -.6077                       
+
+(X_U3.11)   14.9600                   (X_U3.12)   14.9600                       
+
+(X_U3.13)    -.5938                   (X_U3.14)    -.5938                       
+
+(X_U3.53)   14.0000                   (X_U3.54)  -14.0000                       
+
+(X_U3.90)     .0011                   (X_U3.91)   40.0000                       
+
+(X_U3.92)  -40.0000                   (X_U3.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vee       -5.001E-03
+    V_Vcc       -5.001E-03
+    V_V1         1.925E-08
+    V_V2         1.925E-08
+    V_V3         1.920E-08
+    X_U1.vb     -1.300E-13
+    X_U1.vc      1.400E-11
+    X_U1.ve      1.432E-11
+    X_U1.vlim    1.108E-07
+    X_U1.vlp    -4.000E-11
+    X_U1.vln    -4.000E-11
+    X_U2.vb     -9.833E-13
+    X_U2.vc      1.400E-11
+    X_U2.ve      1.433E-11
+    X_U2.vlim    1.999E-07
+    X_U2.vlp    -4.000E-11
+    X_U2.vln    -4.000E-11
+    X_U3.vb     -9.504E-12
+    X_U3.vc      1.399E-11
+    X_U3.ve      1.434E-11
+    X_U3.vlim    1.091E-06
+    X_U3.vlp    -4.000E-11
+    X_U3.vln    -4.000E-11
+
+    TOTAL POWER DISSIPATION   1.50E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/09/17 18:15:57 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-Resposta freqüencial"  [ C:\Users\j.mendez.orero\Desktop\Practica1\practica1-pspicefiles\schematic1\resposta
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

@@ -1,0 +1,9 @@
+* source PRACTICA1
+V_Vee         0 VEE 15Vdc
+R_R3         0 OUT  10k TC=0,0 
+V_Vcc         VCC 0 15Vdc
+R_R1         IN N00216  1k TC=0,0 
+X_U1         0 N00216 VCC VEE OUT uA741
+C_C1         N00216 OUT  10u  TC=0,0 
+V_V1         IN 0  
++SIN 0 10V 2kHz 0 0 0

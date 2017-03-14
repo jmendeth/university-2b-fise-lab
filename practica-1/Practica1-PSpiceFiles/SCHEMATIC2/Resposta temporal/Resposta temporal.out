@@ -1,0 +1,168 @@
+
+**** 03/09/17 20:14:18 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC2-Resposta temporal"  [ C:\Users\j.mendez.orero\Desktop\Practica1\Practica1-PSpiceFiles\SCHEMATIC2\Resposta te
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "Resposta temporal.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.5\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 1ms 0 50us 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC2.net" 
+
+
+
+**** INCLUDING SCHEMATIC2.net ****
+* source PRACTICA1
+V_Vee         0 VEE 15Vdc
+R_R3         0 OUT  10k TC=0,0 
+V_Vcc         VCC 0 15Vdc
+R_R1         IN N00216  1k TC=0,0 
+X_U1         0 N00216 VCC VEE OUT uA741
+C_C1         N00216 OUT  10u  TC=0,0 
+V_V1         IN 0  
++SIN 0 10V 2kHz 0 0 0
+
+**** RESUMING "Resposta temporal.cir" ****
+.END
+
+**** 03/09/17 20:14:18 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC2-Resposta temporal"  [ C:\Users\j.mendez.orero\Desktop\Practica1\Practica1-PSpiceFiles\SCHEMATIC2\Resposta te
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_U1.dy         
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 03/09/17 20:14:18 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC2-Resposta temporal"  [ C:\Users\j.mendez.orero\Desktop\Practica1\Practica1-PSpiceFiles\SCHEMATIC2\Resposta te
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         
+               NPN             
+       LEVEL    1            
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 03/09/17 20:14:18 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC2-Resposta temporal"  [ C:\Users\j.mendez.orero\Desktop\Practica1\Practica1-PSpiceFiles\SCHEMATIC2\Resposta te
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   IN)    0.0000  (  OUT)   14.6420  (  VCC)   15.0000  (  VEE)  -15.0000      
+
+(N00216)-79.66E-06 (X_U1.6)    -.0019 (X_U1.7)   14.7180 (X_U1.8)   14.7180     
+
+(X_U1.9)    0.0000 (X_U1.10)    -.6077                   (X_U1.11)   14.9600    
+
+(X_U1.12)   14.9600                   (X_U1.13)    -.5939                       
+
+(X_U1.14)    -.5938                   (X_U1.53)   14.0000                       
+
+(X_U1.54)  -14.0000                   (X_U1.90)    1.5130                       
+
+(X_U1.91)   40.0000                   (X_U1.92)  -40.0000                       
+
+(X_U1.99)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vee       -1.667E-03
+    V_Vcc       -1.618E-03
+    V_V1        -7.966E-08
+    X_U1.vb     -1.861E-08
+    X_U1.vc     -4.875E-05
+    X_U1.ve      2.919E-11
+    X_U1.vlim    1.513E-03
+    X_U1.vlp    -3.849E-11
+    X_U1.vln    -4.152E-11
+
+    TOTAL POWER DISSIPATION   4.93E-02  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/09/17 20:14:18 ****** PSpice 16.5.0 (April 2011) ****** ID# 0 ********
+
+ ** Profile: "SCHEMATIC2-Resposta temporal"  [ C:\Users\j.mendez.orero\Desktop\Practica1\Practica1-PSpiceFiles\SCHEMATIC2\Resposta te
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .03
+
