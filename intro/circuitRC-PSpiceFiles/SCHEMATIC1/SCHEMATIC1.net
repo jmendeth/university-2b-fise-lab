@@ -1,0 +1,5 @@
+* source CIRCUITRC
+C_C1         N00200 N00193  10n  TC=0,0 
+R_R1         0 N00200  1k TC=0,0 
+V_Vi         N00193 0  
++PULSE 0V 1V 1ns 1ns 1ns 100us 200us
