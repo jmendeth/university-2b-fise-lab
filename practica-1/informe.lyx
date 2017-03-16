@@ -1,0 +1,2798 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass tufte-handout
+\begin_preamble
+\usepackage[parfill]{parskip}
+\usepackage{mathtools}
+\usepackage{siunitx}
+\end_preamble
+\options a4paper
+\use_default_options true
+\begin_modules
+customHeadersFooters
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=black, citecolor=black, urlcolor=blue, filecolor=blue, pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\notefontcolor #0000ff
+\branch Pregunta
+\selected 1
+\filename_suffix 0
+\color #00ff00
+\end_branch
+\branch Respuesta
+\selected 0
+\filename_suffix 0
+\color #aa55ff
+\end_branch
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict true
+\end_header
+
+\begin_body
+
+\begin_layout Title
+FISE QP2016
+\begin_inset Newline newline
+\end_inset
+
+Informe práctica 1
+\end_layout
+
+\begin_layout Author
+Xavier Mendez
+\end_layout
+
+\begin_layout Date
+13 de marzo de 2017
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+parskip}{
+\backslash
+medskipamount}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+parindent}{0pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ejercicio 1
+\end_layout
+
+\begin_layout Standard
+En este primer ejercicio se pide introducir el esquemático de la etapa inversora
+, y aplicarle una señal sinusoidal de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{10}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+ a la entrada.
+\end_layout
+
+\begin_layout Standard
+En la fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-1-1"
+
+\end_inset
+
+ puede verse la simulación temporal de los diez primeros periodos de entrada
+ y salida.
+ No se aprecian transitorios, ni ningún otro artefacto.
+ La ganancia es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{0}{
+\backslash
+decibel}
+\end_layout
+
+\end_inset
+
+ (unidad) con desfase 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{180}{
+\backslash
+degree}
+\end_layout
+
+\end_inset
+
+ (inversión) tal y como se esperaba.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q1.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-1-1"
+
+\end_inset
+
+ Comparación entrada--salida habitual en un inversor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si visualizamos la tensión en el terminal inversor del AO (fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-1-2"
+
+\end_inset
+
+), vemos una sinusoide de la misma frecuencia que la entrada pero desfasada
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{270}{
+\backslash
+degree}
+\end_layout
+
+\end_inset
+
+, que oscila entre aproximadamente 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{8}{
+\backslash
+micro
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{30}{
+\backslash
+micro
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+.
+ La tensión en el terminal no inversor está fijada a tierra en el esquemático.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q1-2.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-1-2"
+
+\end_inset
+
+ Detalle de los terminales del AO en un inversor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora modificamos temporalmente la frecuencia de la entrada a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+mega
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+, y simulamos diez periodos de entrada--salida.
+ Los resultados pueden verse en la fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-1-3"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Se observa principalmente la atenuación y el desfase introducidos por el
+ AO al trabajar a esta frecuencia, y algo de transitorio.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q1-3.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-1-3"
+
+\end_inset
+
+ Comparación entrada--salida a frecuencia alta.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ejercicio 2
+\end_layout
+
+\begin_layout Standard
+En este ejercicio se pide aumentar el valor de 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{10}{
+\backslash
+kilo
+\backslash
+ohm}
+\end_layout
+
+\end_inset
+
+ para que el inversor amplifique la entrada por 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{10}{
+\backslash
+decibel}
+\end_layout
+
+\end_inset
+
+.
+ Asimismo, se aumenta la amplitud de entrada a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ (a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+En la fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-2-1"
+
+\end_inset
+
+ se puede ver la simulación temporal de los primeros diez periodos de la
+ entrada y la salida.
+ No se aprecian transitorios ni ningún otro artefacto.
+ La ganancia es ahora de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{10}{
+\backslash
+decibel}
+\end_layout
+
+\end_inset
+
+ como se esperaba, y el desfase sigue siendo 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{180}{
+\backslash
+degree}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q2-1.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-2-1"
+
+\end_inset
+
+ Comparación entrada--salida grande en amplificador inversor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora duplicamos la amplitud de la entrada y simulamos de la misma forma.
+ Como puede verse en la fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-2-2"
+
+\end_inset
+
+, esto causa que la salida esperada exceda la alimentación del AO y este
+ se satura, quedando el seno de la salida 
+\begin_inset Quotes fld
+\end_inset
+
+cortado
+\begin_inset Quotes frd
+\end_inset
+
+ en los picos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q2-2.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-2-2"
+
+\end_inset
+
+ Comparación entrada--salida saturada en amplificador inversor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si visualizamos la tensión en el terminal inversor del AO (fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-2-3"
+
+\end_inset
+
+), vemos que se asemeja a una sinusoide pequeña como en la fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-1-2"
+
+\end_inset
+
+, excepto que en las zonas donde el AO se satura, cuando la aproximación
+ de cortocircuito virtual se rompe y la tensión en el terminal inversor
+ «recibe» ese excedente, llegando a casi los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{500}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ en sus picos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q2-3.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-2-3"
+
+\end_inset
+
+ Detalle terminal inversor del AO en amplificador inversor saturado.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+El amplificador operacional empieza a mostrar saturación cuando la salida
+ alcanza los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{14.81}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+, de forma que la amplitud de entrada máxima que no produce saturación es:
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{
+\backslash
+SI{14.81}{
+\backslash
+volt}}{10} = 
+\backslash
+SI{1.481}{
+\backslash
+volt}$
+\end_layout
+
+\end_inset
+
+.
+ En la fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-2-4"
+
+\end_inset
+
+ se puede observar una simulación a con amplitud de entrada que lo confirma.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q2-4.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-2-4"
+
+\end_inset
+
+ Comparación máxima entrada--salida posible en amplificador inversor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ejercicio 3
+\end_layout
+
+\begin_layout Standard
+De nuevo se establece 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+kilo
+\backslash
+ohm}
+\end_layout
+
+\end_inset
+
+ para volver al inversor simple.
+ En este ejercicio se pide que se reduzca la amplitud de la sinusoide de
+ entrada a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ para observar los errores en continua del AO.
+\end_layout
+
+\begin_layout Standard
+En la fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-3-1"
+
+\end_inset
+
+ puede verse la simulación temporal de varios periodos de entrada (ya negada,
+ para apreciar mejor el efecto) y salida.
+ Se aprecia que la salida está desplazada verticalmente, probablemente a
+ causa de la tensión offset del AO.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q3-1.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-3-1"
+
+\end_inset
+
+ Comparación entrada--salida débil en un inversor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora se conecta la entrada a tierra para simular una entrada nula.
+ La tensión de salida (ver fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-3-2"
+
+\end_inset
+
+) es 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{118.3}{
+\backslash
+micro
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement p
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q3-2.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-3-2"
+
+\end_inset
+
+ Comparación entrada nula con la salida en inversor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A continuación se establece 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{10}{
+\backslash
+kilo
+\backslash
+ohm}
+\end_layout
+
+\end_inset
+
+ para tener una ganancia de 
+\begin_inset Formula $-10$
+\end_inset
+
+, y se repite la simulación.
+ La tensión de salida (ver fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-3-3"
+
+\end_inset
+
+) es 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement p
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q3-3.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-3-3"
+
+\end_inset
+
+ Comparación entrada nula con la salida en amplificador inversor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora se modifica tambien 
+\begin_inset Formula $R_{1}$
+\end_inset
+
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{10}{
+\backslash
+kilo
+\backslash
+ohm}
+\end_layout
+
+\end_inset
+
+, volviendo a la ganancia unidad.
+ El valor de salida (ver fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-3-4"
+
+\end_inset
+
+) es ahora de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{836.1}{
+\backslash
+micro
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement p
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q3-4.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-3-4"
+
+\end_inset
+
+ Comparación entrada nula con la salida en inversor modificado.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+TODO q-3-5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora, manteniendo los valores actuales de las resistencias de la etapa,
+ se pide introducir una resistencia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{5}{
+\backslash
+kilo
+\backslash
+ohm}
+\end_layout
+
+\end_inset
+
+ entre el terminal no inversor del AO y el nodo de referencia.
+ El valor de la salida se ha reducido drásticamente, ahora es de tan solo
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{38.9}{
+\backslash
+micro
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ejercicio 4
+\end_layout
+
+\begin_layout Standard
+En este ejercicio se pide construir una etapa restadora cuyas entradas tienen
+ una tensión común de forma sinusoidal y amplitud grande (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{10}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+), mientras que la tensión diferencial en sí son pulsos de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{2}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ de amplitud pico a pico.
+\end_layout
+
+\begin_layout Standard
+En la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-4-1"
+
+\end_inset
+
+ se puede ver los primeros pulsos de la entrada, junto con la correspondiente
+ salida.
+ Se aprecia claramente que los pulsos de la salida tienen superpuesto un
+ seno, que corresponde a la tensión común atenuada a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{530}{
+\backslash
+micro
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ de amplitud.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q4-1.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-4-1"
+
+\end_inset
+
+ Comparación entrada--salida en un restador.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Todo esto es una consecuencia, por tanto, de que el rechazo en modo común
+ del AO no es infinito: la salida es la que esperabamos (pulsos cuadrados
+ de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{2}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+, ganancia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{0}{
+\backslash
+decibel}
+\end_layout
+
+\end_inset
+
+), pero tiene superpuesta la tensión común atenuada por 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{
+\backslash
+num{530e-6}}{
+\backslash
+num{10}} = 
+\backslash
+num{53e-6} = 
+\backslash
+SI{-85.5}{
+\backslash
+decibel}$
+\end_layout
+
+\end_inset
+
+.
+ El CMRR de toda la etapa es, por tanto: 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+[ 
+\backslash
+left(
+\backslash
+SI{0}{
+\backslash
+decibel}
+\backslash
+right) - 
+\backslash
+left(
+\backslash
+SI{-85.5}{
+\backslash
+decibel}
+\backslash
+right) = 
+\backslash
+SI{85.5}{
+\backslash
+decibel} 
+\backslash
+]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ejercicio 5
+\end_layout
+
+\begin_layout Standard
+En este ejercicio se pide hacer una simulación de respuesta frecuencial
+ del amplificador inversor inicial.
+ Se sustituye la entrada por una fuente 
+\family sans
+VAC
+\family default
+ de amplitud 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ y se simula desde
+\begin_inset Flex Sidenote
+status collapsed
+
+\begin_layout Plain Layout
+En las figuras se empieza a mostrar el eje desde la frecuencia 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+, para dar más visibilidad a la zona de transición.
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{10}{
+\backslash
+mega
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+La ganancia y desfase de la etapa en función de la frecuencia puede verse
+ en la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-5-1"
+
+\end_inset
+
+.
+ El ancho de banda (intervalo en que la ganancia está por encima de los
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{-3}{
+\backslash
+decibel}
+\end_layout
+
+\end_inset
+
+) es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{650}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q5-1.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-5-1"
+
+\end_inset
+
+ Respuesta frecuencial en inversor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Para una señal de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+, la etapa introduce una ganancia de menos de una milésima de decibelio
+ (por lo tanto puede considerarse nula) y un desfase de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{180}{
+\backslash
+degree}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+El desfase cruza los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{90}{
+\backslash
+degree}
+\end_layout
+
+\end_inset
+
+ cuando la frecuencia es 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{880}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ejercicio 6
+\end_layout
+
+\begin_layout Standard
+Ahora se pide repetir el análisis frecuencial de la etapa inversora, pero
+ para distintos valores de 
+\begin_inset Formula $R_{2}$
+\end_inset
+
+ de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+kilo
+\backslash
+ohm}
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{10}{
+\backslash
+kilo
+\backslash
+ohm}
+\end_layout
+
+\end_inset
+
+ y 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{100}{
+\backslash
+kilo
+\backslash
+ohm}
+\end_layout
+
+\end_inset
+
+ (modificandose la ganancia en cada caso).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q6.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-6-1"
+
+\end_inset
+
+ Respuesta frecuencial en amplificador inversor para distintos valores de
+ realimentación.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-6-1"
+
+\end_inset
+
+ pueden verse superpuestos los diagramas de Bode (ganancia y desfase) para
+ cada valor pedido.
+ Se comprueba que los productos ganancia --- ancho de banda son comparables:
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring R2 = 100 kOhm
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2 = 
+\backslash
+SI{100}{
+\backslash
+kilo
+\backslash
+ohm}$
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\left|H\right|=100;\;BW=\SI{10}{\kilo\hertz}\Rightarrow\left|H\right|\cdot BW=\SI{1000}{\kilo\hertz}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring R2 = 100 kOhm
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2 = 
+\backslash
+SI{10}{
+\backslash
+kilo
+\backslash
+ohm}$
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\left|H\right|=10;\;BW=\SI{98}{\kilo\hertz}\Rightarrow\left|H\right|\cdot BW=\SI{980}{\kilo\hertz}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring R2 = 100 kOhm
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_2 = 
+\backslash
+SI{1}{
+\backslash
+kilo
+\backslash
+ohm}$
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\left|H\right|=1;\;BW=\SI{650}{\kilo\hertz}\Rightarrow\left|H\right|\cdot BW=\SI{650}{\kilo\hertz}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nótese que, si realmente fueramos a aplicar una entrada de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ a la entrada con una ganancia de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{40}{
+\backslash
+decibel}
+\end_layout
+
+\end_inset
+
+, el AO se saturaría de forma que la salida sería prácticamente una señal
+ cuadrada de 
+unos 
+\lang spanish
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{15}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ de amplitud.
+ Pero estos errores no salen reflejados en el análisis frecuencial; aquí
+ se asume que la etapa es lineal a todos efectos.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ejercicio 7
+\end_layout
+
+\begin_layout Standard
+En este ejercicio se aplicarán pulsos de duración 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{10}{
+\backslash
+micro
+\backslash
+second}
+\end_layout
+
+\end_inset
+
+ a la entrada del inversor, con el fin de medir el tiempo de subida y bajada
+ del AO.
+ En la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-7-1"
+
+\end_inset
+
+ puede verse una simulación temporal del primer pulso de la entrada (negada,
+ para apreciar mejor el efecto) con la correspondiente salida.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q7.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-7-1"
+
+\end_inset
+
+ Comparación salida con un escalón a la entrada en inversor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+En ella podemos medir que el tiempo de subida del AO (definido como el intervalo
+ desde que se alcanza el 
+\begin_inset Formula $10\%$
+\end_inset
+
+ de la subida hasta que se alcanza el 
+\begin_inset Formula $90\%$
+\end_inset
+
+) es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+SI{1.6448}{
+\backslash
+micro
+\backslash
+second} - 
+\backslash
+SI{1.1053}{
+\backslash
+micro
+\backslash
+second} = 
+\backslash
+SI{540}{
+\backslash
+nano
+\backslash
+second}$
+\end_layout
+
+\end_inset
+
+.
+ Análogamente, se mide que el tiempo de bajada es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{513}{
+\backslash
+nano
+\backslash
+second}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Ejercicio 8
+\end_layout
+
+\begin_layout Standard
+Por último, se pide ampliar la amplitud de los pulsos de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{-10}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{-1}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+En la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-8-1"
+
+\end_inset
+
+ puede verse la simulación temporal del primer pulso de la entrada (negada,
+ para apreciar mejor el efecto) con la correspondiente salida.
+ Podemos ver claramente como la subida se prolonga a causa de que la salida
+ alcanza la máxima derivada permitida por el AO (
+\emph on
+slew-rate
+\emph default
+).
+ Esta pendiente máxima se mide en 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{481}{
+\backslash
+milli
+\backslash
+volt
+\backslash
+per
+\backslash
+micro
+\backslash
+second}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q8-1.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-8-1"
+
+\end_inset
+
+ Comparación salida con un escalón grande a la entrada en inversor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora se cambian los pulsos por una entrada sinusoidal, tambien de gran
+ amplitud (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{5}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+) de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+ de frecuencia.
+ En la fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-8-2"
+
+\end_inset
+
+ puede verse una simulación temporal de los primeros periodos de entrada
+ y salida.
+ No se aprecia ninguna diferencia.
+ Se simulan más periodos y se visualiza mediante FFT (fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-8-3"
+
+\end_inset
+
+), lo cual confirma que efectivamente no hay distorsión alguna.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q8-2.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-8-2"
+
+\end_inset
+
+ Comparación salida sin distorsión por 
+\emph on
+slew-rate
+\emph default
+ en inversor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q8-3_2.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-8-3"
+
+\end_inset
+
+ Comparación DFT salida sin distorsión por 
+\emph on
+slew-rate
+\emph default
+ en inversor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A continuación se aumenta la frecuencia a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{20}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+.
+ Ahora la simulación temporal (ver fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-8-4"
+
+\end_inset
+
+) sí muestra claramente un efecto parecido al de la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-8-1"
+
+\end_inset
+
+, donde la entrada varia muy rápidamente y la salida del AO no es capaz
+ de seguirla en todo momento.
+\end_layout
+
+\begin_layout Standard
+Se ha representado tambien las derivadas de salida y entrada para observar
+ el efecto con más claridad.
+ Puede observarse como la derivada de la salida es incapaz de sobrepasar
+ los 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{481}{
+\backslash
+milli
+\backslash
+volt
+\backslash
+per
+\backslash
+micro
+\backslash
+second}
+\end_layout
+
+\end_inset
+
+ que se determinaron al principio del ejercicio.
+ Todo esto es consistente con el 
+\emph on
+datasheet
+\emph default
+ del AO, que especifica un 
+\emph on
+slew-rate
+\emph default
+ típico de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{500}{
+\backslash
+milli
+\backslash
+volt
+\backslash
+per
+\backslash
+micro
+\backslash
+second}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+De nuevo se simulan más periodos y se visualiza mediante FFT (fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-8-6"
+
+\end_inset
+
+), que confirma que efectivamente hay un nivel de distorsión harmónica más
+ que respetable.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement p
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q8-4_3.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-8-4"
+
+\end_inset
+
+ Comparación salida con distorsión por 
+\emph on
+slew-rate
+\emph default
+ en inversor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement p
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q8-5.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-8-6"
+
+\end_inset
+
+ Comparación DFT salida con distorsión por 
+\emph on
+slew-rate
+\emph default
+ en inversor.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
