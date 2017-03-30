@@ -1,0 +1,1091 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass tufte-handout
+\begin_preamble
+\usepackage[parfill]{parskip}
+\usepackage{mathtools}
+\usepackage{siunitx}
+\usepackage{circuitikz}
+\usepackage{nicefrac}
+\end_preamble
+\options a4paper
+\use_default_options true
+\begin_modules
+customHeadersFooters
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=black, citecolor=black, urlcolor=blue, filecolor=blue, pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\notefontcolor #0000ff
+\branch Pregunta
+\selected 1
+\filename_suffix 0
+\color #00ff00
+\end_branch
+\branch Respuesta
+\selected 0
+\filename_suffix 0
+\color #aa55ff
+\end_branch
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict true
+\end_header
+
+\begin_body
+
+\begin_layout Title
+FISE QP2016, grup 52-5
+\begin_inset Newline newline
+\end_inset
+
+Informe práctica 2
+\end_layout
+
+\begin_layout Author
+Àlex Eslava
+\begin_inset Newline newline
+\end_inset
+
+Xavier Mendez
+\end_layout
+
+\begin_layout Date
+26 de març de 2017
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+parskip}{
+\backslash
+medskipamount}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+parindent}{0pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Implementació i caracterització de la primera etapa
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename stage-schematic.png
+	lyxscale 33
+	width 22em
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:stage-schematic"
+
+\end_inset
+
+ Esquemàtic genèric de l'etapa no inversora.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Per al muntatge de l'etapa (fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:stage-schematic"
+
+\end_inset
+
+) hem triat els valors: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{align*}
+\end_layout
+
+\begin_layout Plain Layout
+
+  R_1 &= 
+\backslash
+SI{39}{
+\backslash
+kilo
+\backslash
+ohm} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  R_2 &= 
+\backslash
+SI{680}{
+\backslash
+kilo
+\backslash
+ohm} + 
+\backslash
+SI{120}{
+\backslash
+kilo
+\backslash
+ohm} 
+\backslash
+
+\backslash
+
+\end_layout
+
+\begin_layout Plain Layout
+
+  R_3 &= R_4 = 
+\backslash
+SI{68}{
+\backslash
+kilo
+\backslash
+ohm}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{align*}
+\end_layout
+
+\end_inset
+
+ Amb la qual cosa l'etapa hauria de tenir un guany d'aproximadament 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+num{20}
+\end_layout
+
+\end_inset
+
+.
+ Un cop muntat en la placa i ja amb l'alimentació, les tensions contínues
+ són:
+\end_layout
+
+\begin_layout Description
+Entrada
+\begin_inset space ~
+\end_inset
+
+inversora: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{5.66}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Entrada
+\begin_inset space ~
+\end_inset
+
+no
+\begin_inset space ~
+\end_inset
+
+inversora: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{5.92}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Sortida: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{6.19}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La diferència de tensió en les entrades és de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{260}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+, podem donar per bona l'aproximació del curtcircuit virtual feta en l'estudi
+ previ.
+\end_layout
+
+\begin_layout Standard
+A continuació fem arribar una senyal sinusoïdal de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{10}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{40}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+ per l'entrada de la etapa.
+ Mesurem entrada i sortida a l'oscil·loscopi i verifiquem que, efectivament,
+ el circuit té el comportament esperat.
+ Les tensions pic a pic
+\begin_inset Flex Sidenote
+status collapsed
+
+\begin_layout Plain Layout
+Les senyals de l'oscil·loscopi contenen soroll a alta freqüència significatiu
+ (veure últimes figures) que contribueix a les mesures pic a pic.
+\end_layout
+
+\end_inset
+
+ de l'entrada i la sortida són, aproximadament, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{20}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ i 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{400}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+.
+ Per tant un guany de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+num{20}
+\end_layout
+
+\end_inset
+
+ i estan desfasades 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{180}{
+\backslash
+degree}
+\end_layout
+
+\end_inset
+
+ com s'espera.
+\end_layout
+
+\begin_layout Standard
+Després es mesuren les amplituds (i el corresponent guany) a diverses freqüèncie
+s d'entrada.
+ Els resultats es poden veure a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:freq-1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename f1.png
+	width 16cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:freq-1"
+
+\end_inset
+
+ Resposta freqüencial de l'etapa, on es pot apreciar un comportament passa-banda.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Implementació i caracterització de l'amplificador complet
+\end_layout
+
+\begin_layout Standard
+Es munta la segona etapa, i es mesuren les tensions sense cap senyal a l'entrada.
+\end_layout
+
+\begin_layout Description
+Entrada
+\begin_inset space ~
+\end_inset
+
+inversora
+\begin_inset space ~
+\end_inset
+
+1: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{5.66}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Entrada
+\begin_inset space ~
+\end_inset
+
+inversora
+\begin_inset space ~
+\end_inset
+
+2: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{5.68}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Entrada
+\begin_inset space ~
+\end_inset
+
+no
+\begin_inset space ~
+\end_inset
+
+inversora
+\begin_inset space ~
+\end_inset
+
+1: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{5.98}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Entrada
+\begin_inset space ~
+\end_inset
+
+no
+\begin_inset space ~
+\end_inset
+
+inversora
+\begin_inset space ~
+\end_inset
+
+2: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{5.98}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Sortida
+\begin_inset space ~
+\end_inset
+
+1: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{6.19}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Sortida
+\begin_inset space ~
+\end_inset
+
+2: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{6.19}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A continuació fem arribar una senyal sinusoïdal de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{10}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{40}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+ per l'entrada de l'amplificador.
+ Les tensions pic a pic de l'entrada, la sortida intermitja i la de l'amplificad
+or complet són, respectivament, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{24}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{500}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ i 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{7}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Novament es mesuren les amplituds (i el corresponent guany de l'amplificador)
+ a diverses freqüències d'entrada.
+ Els resultats es poden veure a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:freq-2"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename f2.png
+	width 16cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:freq-2"
+
+\end_inset
+
+ Resposta freqüencial de l'amplificador complet, on es pot apreciar un comportam
+ent passa-banda.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ara, tornant a la freqüència de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{40}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+, s'augmenta l'amplitud fins que la sortida comença a saturar.
+ L'amplitud d'entrada aproximada on això comença a passar és de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{14}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ (veure fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:p1"
+
+\end_inset
+
+), i aquest és el marge dinàmic de l'amplificador.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename p1.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:p1"
+
+\end_inset
+
+ Captura de l'oscil·loscopi just abans que la sortida comenci a a saturar-se.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si continuem pujant l'amplitud, arriba un moment que la sortida ja no canvia.
+ L'amplitud de sortida aproximada on això comença a passar és d'aproximadament
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{5.3}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ (veure fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:p2"
+
+\end_inset
+
+).
+ Sabem que a aquesta amplitud, la sortida assoleix pendents de fins a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$f 
+\backslash
+cdot A = 
+\backslash
+SI{212}{
+\backslash
+milli
+\backslash
+volt
+\backslash
+per
+\backslash
+micro
+\backslash
+second}$
+\end_layout
+
+\end_inset
+
+.
+ Aquest hauria de ser, per tant, el 
+\emph on
+slew-rate
+\emph default
+ de l'amplificador.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename p2.png
+	lyxscale 50
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:p2"
+
+\end_inset
+
+ Captura de l'oscil·loscopi quan la sortida deixa de canviar.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
