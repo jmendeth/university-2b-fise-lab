@@ -1,0 +1,1762 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass tufte-handout
+\begin_preamble
+\usepackage[parfill]{parskip}
+\usepackage{mathtools}
+\usepackage{siunitx}
+\usepackage{circuitikz}
+\usepackage{nicefrac}
+\end_preamble
+\options a4paper
+\use_default_options true
+\begin_modules
+customHeadersFooters
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=black, citecolor=black, urlcolor=blue, filecolor=blue, pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\notefontcolor #0000ff
+\branch Pregunta
+\selected 1
+\filename_suffix 0
+\color #00ff00
+\end_branch
+\branch Respuesta
+\selected 0
+\filename_suffix 0
+\color #aa55ff
+\end_branch
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict true
+\end_header
+
+\begin_body
+
+\begin_layout Title
+FISE QP2016, grup 52-5
+\begin_inset Newline newline
+\end_inset
+
+Informe práctica 3
+\end_layout
+
+\begin_layout Author
+Àlex Eslava
+\begin_inset Newline newline
+\end_inset
+
+Xavier Mendez
+\end_layout
+
+\begin_layout Date
+3 d'abril de 2017
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+parskip}{
+\backslash
+medskipamount}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+parindent}{0pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Resposta freqüencial del filtre passiu
+\end_layout
+
+\begin_layout Standard
+Es realitza un anàlisi de la resposta freqüencial del filtre passiu, que
+ es pot veure a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-1-1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q1-1.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-1-1"
+
+\end_inset
+
+ Resposta freqüencial del filtre passiu.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+1.1.
+ La freqüència central de filtre és de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+SI{0.9954}{
+\backslash
+kilo
+\backslash
+hertz} 
+\backslash
+simeq 
+\backslash
+SI{1}{
+\backslash
+kilo
+\backslash
+hertz}$
+\end_layout
+
+\end_inset
+
+.
+ El circuit té un guany de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+nicefrac{1}{3} = Q$
+\end_layout
+
+\end_inset
+
+ a la freqüència central, just com s'esperava.
+\end_layout
+
+\begin_layout Section
+Comparació de les respostes freqüencials del filtre passiu i el realimentat
+\end_layout
+
+\begin_layout Standard
+Es realitza un anàlisi simultani de la resposta freqüencial d'ambdós circuits,
+ que es pot veure a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-2-1"
+
+\end_inset
+
+.
+ Per tal que el factor de qualitat sigui 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+num{5}
+\end_layout
+
+\end_inset
+
+, triem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_a = R_f 
+\backslash
+left(2 - 
+\backslash
+nicefrac{1}{Q}
+\backslash
+right) = 
+\backslash
+SI{18}{
+\backslash
+kilo
+\backslash
+ohm}$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q2-1.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-2-1"
+
+\end_inset
+
+ Resposta freqüencial d'ambdós filtres.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+2.1.
+ La freqüència central per a la segona etapa es manté igual que en la primera,
+ la qual cosa és esperada perquè només depen d'
+\begin_inset Formula $R$
+\end_inset
+
+ i 
+\begin_inset Formula $C$
+\end_inset
+
+, que no han canviat.
+ El guany en la segona etapa és 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$9 = Q 
+\backslash
+; 
+\backslash
+nicefrac{R_a}{R_f}$
+\end_layout
+
+\end_inset
+
+.
+ S'observa com els pols complexes conjugats han reduït considerablement
+ l'ample de banda en la segona etapa.
+\end_layout
+
+\begin_layout Standard
+Es repeteix la simulació de la segona etapa però ara establint el valor
+ de 
+\begin_inset Formula $C$
+\end_inset
+
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{10}{
+\backslash
+nano
+\backslash
+farad}
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+nano
+\backslash
+farad}
+\end_layout
+
+\end_inset
+
+ i 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{0.1}{
+\backslash
+nano
+\backslash
+farad}
+\end_layout
+
+\end_inset
+
+.
+ Les funcions de transferència corresponents (mòdul i fase) es poden veure
+ a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-2-2"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q2-2.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-2-2"
+
+\end_inset
+
+ Resposta freqüencial de l'etapa realimentada variant la capacitat.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+2.2.
+ S'observa com efectivament la freqüència central varia amb 
+\begin_inset Formula $C$
+\end_inset
+
+ (
+\begin_inset Formula $\omega_{0}=\nicefrac{1}{RC}$
+\end_inset
+
+).
+ Amb el valor més petit el filtre assoleix una freqüència central propera
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{100}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Aquest cop establim el valor de 
+\begin_inset Formula $R_{f}$
+\end_inset
+
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{18}{
+\backslash
+kilo
+\backslash
+ohm}
+\end_layout
+
+\end_inset
+
+ i 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{19}{
+\backslash
+kilo
+\backslash
+ohm}
+\end_layout
+
+\end_inset
+
+ (per a obtenir 
+\begin_inset Formula $Q=5$
+\end_inset
+
+ i 
+\begin_inset Formula $Q=10$
+\end_inset
+
+ respectivament).
+ Les funcions de transferència corresponents (mòdul i fase) es poden veure
+ a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-2-3"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q2-3.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-2-3"
+
+\end_inset
+
+ Resposta freqüencial de l'etapa realimentada variant 
+\begin_inset Formula $R_{f}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+2.3.
+ S'obtenen guanys de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{9}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ i 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{19}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ respectivament, a la freqüència central.
+\end_layout
+
+\begin_layout Section
+Filtratge d’un senyal quadrat
+\end_layout
+
+\begin_layout Standard
+Es fa entrar un senyal quadrat a l'entrada d'ambdues etapes.
+ Es simulen molts períodes i es fa la FFT de la sortida; el resultat es
+ pot veure a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-3-1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q3-1.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-3-1"
+
+\end_inset
+
+ FFT de la sortida d'ambdues etapes en processar un senyal quadrat.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+3.1.
+ En l'etapa passiva no s'aprecia transitori.
+ En l'etapa realimentada s'aprecia un transitori que es fa despreciable
+ a partir dels 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{8}{
+\backslash
+milli
+\backslash
+second}
+\end_layout
+
+\end_inset
+
+.
+ En la FFT es pot veure com, per l'etapa passiva, hi ha una diferència d'aproxim
+adament mitja dècada entre l'harmònic principal i el tercer harmònic.
+ Per l'etapa realimentada, per contra, hi ha una diferència d'aproximadament
+ una dècada i mitja.
+ Per tant, la segona etapa filtra deu vegades millor.
+\end_layout
+
+\begin_layout Standard
+A continuació es canvia 
+\begin_inset Formula $R_{f}$
+\end_inset
+
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{19}{
+\backslash
+kilo
+\backslash
+ohm}
+\end_layout
+
+\end_inset
+
+ per a aconseguir 
+\begin_inset Formula $Q=10$
+\end_inset
+
+ i es torna a simular (veure fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-3-2"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q3-2.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-3-2"
+
+\end_inset
+
+ FFT de la sortida d'ambdues etapes en processar un senyal quadrat (
+\begin_inset Formula $Q=10$
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+3.2.
+ Ara el transitori s'aprecia de la mateixa durada, potser un 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{10}{
+\backslash
+percent}
+\end_layout
+
+\end_inset
+
+ més llarg però podria ser soroll.
+ En la FFT confirmem que ara l'etapa està amplificant el primer harmònic
+ uns 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{3}{
+\backslash
+decibel}
+\end_layout
+
+\end_inset
+
+ més que abans.
+ El quocient entre primer i tercer harmònic ha augmentat una mica.
+ Per tant, el filtre és més selectiu que abans.
+\end_layout
+
+\begin_layout Section
+Limitacions del filtre actiu
+\end_layout
+
+\begin_layout Standard
+De nou amb 
+\begin_inset Formula $Q=5$
+\end_inset
+
+, es canvia l'amplitud del senyal quadrat a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{2}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ pic a pic.
+ El resultat de la simulació temporal dels primers períodes de sortida (superpos
+ada amb l'entrada negada, per apreciar millor l'efecte) es pot veure a la
+ figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-4-1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q4-1.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-4-1"
+
+\end_inset
+
+ Simulació temporal de la sortida per a un senyal quadrat de gran amplitud.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+4.1.
+ L'amplitud de la sortida en la qüestió
+\begin_inset space ~
+\end_inset
+
+3.1 era de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{2.1}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+; per tant, l'amplitud teòrica del senyal de sortida ara hauria de ser deu
+ cops més gran, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{21}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+.
+ En canvi, la sortida presenta molta distorsió i no arriba als 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{12}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ pic a pic.
+ Es pot apreciar que l'AO és incapaç de seguir l'alta derivada de la sortida
+ (probablement a causa de l'
+\emph on
+slew-rate
+\emph default
+).
+\end_layout
+
+\begin_layout Standard
+Ara es representa també la sortida de l'AO (fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-4-2"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q4-2.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-4-2"
+
+\end_inset
+
+ Simulació temporal de la sortida intermitja per a un senyal quadrat de
+ gran amplitud.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+4.2.
+ Aquest senyal ha de presentar distorsió perquè és la sortida de l'AO i
+ està arribant al límit de l'
+\emph on
+slew-rate
+\emph default
+.
+\end_layout
+
+\begin_layout Section
+Disseny d'un circuit oscil·lador
+\end_layout
+
+\begin_layout Standard
+Es canvia 
+\begin_inset Formula $R_{f}$
+\end_inset
+
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{21}{
+\backslash
+kilo
+\backslash
+ohm}
+\end_layout
+
+\end_inset
+
+ per tornar el circuit inestable segons la teoria.
+ Els resultats de la simulació AC es poden veure a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-5-1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q5-1.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-5-1"
+
+\end_inset
+
+ Resposta freqüencial de l'etapa realimentada amb valors inestables.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+5.1.
+ S'obté un resultat on el guany és similar, però abans la fase canviava
+ de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{-90}{
+\backslash
+degree}
+\end_layout
+
+\end_inset
+
+ a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{90}{
+\backslash
+degree}
+\end_layout
+
+\end_inset
+
+ passant per 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{180}{
+\backslash
+degree}
+\end_layout
+
+\end_inset
+
+ en la freqüència central; ara ho fa en sentit contrari, passant per 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{0}{
+\backslash
+degree}
+\end_layout
+
+\end_inset
+
+ en la freqüència central.
+ Això es deu al canvi de signe en 
+\begin_inset Formula $Q$
+\end_inset
+
+, i per tant en el terme de primer ordre del denominador a 
+\begin_inset Formula $H(s)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Es fa entrar un senyal quadrat de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{200}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ i freqüència 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+ a l'entrada de l'etapa.
+ La simulació temporal dels primers períodes de la sortida de l'etapa i
+ la de l'AO es poden veure a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-5-2"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q5-2.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-5-2"
+
+\end_inset
+
+ Simulació temporal d'ambdues sortides de l'etapa realimentada inestable,
+ amb senyal quadrat a l'entrada.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+5.2.
+ S'obté una sortida sinusoidal de la mateixa freqüència que va augmentant
+ en amplitud fins que l'AO se satura i comença a distorsionar, llavors s'estabil
+itza en una amplitud d'aproximadament 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{5.1}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ara es canvia la freqüència del senyal d'entrada a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{10}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+ i es torna a simular (fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-5-3"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q5-3.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-5-3"
+
+\end_inset
+
+ Simulació temporal d'ambdues sortides de l'etapa realimentada inestable,
+ amb senyal quadrat d'alta freqüència a l'entrada.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+5.3.
+ S'obté la mateixa sortida que en la qüestió anterior, una sinusoide a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+ (per tant, de freqüència 
+\emph on
+diferent
+\emph default
+ a l'entrada) que va augmentant en amplitud fins que s'estabilitza a causa
+ de la saturació de l'AO.
+ En aquest cas triga aproximadament el doble en estabilitzar-se, però.
+\end_layout
+
+\begin_layout Standard
+Finalment, es suprimeix l'entrada (
+\begin_inset Formula $V_{i}=0$
+\end_inset
+
+) i es torna a simular fins que s'arriba al règim permanent (fig.
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-5-4"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q5-4.pdf
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-5-4"
+
+\end_inset
+
+ Simulació temporal d'ambdues sortides de l'etapa realimentada inestable,
+ sense entrada.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+5.4.
+ S'obté una freqüència d'oscil·lació de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+.
+ Com ja hem comentat, l'amplitud s'estabilitza a causa de la saturació de
+ l'AO.
+\end_layout
+
+\begin_layout Section
+Amplificador no lineal
+\end_layout
+
+\begin_layout Standard
+Es construeix el circuit demanat, que utilitza un sistema no lineal per
+ a l'estabilització de l'amplitud.
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+6.1.
+ Quan ambdós díodes estan en tall, suposant l'AO com a ideal, tenim 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_i = V_o 
+\backslash
+frac{R_a}{R_a + R_f} 
+\backslash
+Leftrightarrow G = 
+\backslash
+nicefrac{V_o}{V_i} = 1 + 
+\backslash
+nicefrac{R_f}{R_a}$
+\end_layout
+
+\end_inset
+
+.
+ Per als valors concrets, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$G = 
+\backslash
+num{3.2}$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Quan un dels díodes condueix, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{ajust}$
+\end_layout
+
+\end_inset
+
+ s'afeixeix 
+en para
+\lang spanish
+l·lel a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_f$
+\end_layout
+
+\end_inset
+
+ i resulta 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$G 
+\backslash
+simeq 
+\backslash
+num{2.53}$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+A continuació es realitza una simulació temporal dels primers períodes de
+ la sortida.
+\end_layout
+
+\end_body
+\end_document
