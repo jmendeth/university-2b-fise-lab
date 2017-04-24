@@ -1720,10 +1720,7 @@ $R_{ajust}$
 
 \end_inset
 
- s'afeixeix 
-en para
-\lang spanish
-l·lel a 
+ s'afeigeix en paral·lel a 
 \begin_inset ERT
 status open
 
@@ -1734,7 +1731,7 @@ $R_f$
 
 \end_inset
 
- i resulta 
+ i resulta que 
 \begin_inset ERT
 status open
 
@@ -1756,6 +1753,436 @@ num{2.53}$
 \begin_layout Standard
 A continuació es realitza una simulació temporal dels primers períodes de
  la sortida.
+\end_layout
+
+\begin_layout Section
+Muntatge i mesura del filtre actiu
+\end_layout
+
+\begin_layout Standard
+Es munta el circuit demanat en la placa i s'aplica una entrada sinusoïdal
+ de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{4}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+ i 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{500}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ pic a pic.
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+8.1.
+ La nova freqüència central resulta 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+omega_0 = 
+\backslash
+SI{723.3}{
+\backslash
+hertz}$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Es visualitza 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_x$
+\end_layout
+
+\end_inset
+
+ a l'oscil·loscopi i es canvia el cursor del potenciòmetre.
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+8.2.
+ El circuit comença a oscil·lar al voltant de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{ajust} = 
+\backslash
+SI{9.2}{
+\backslash
+kilo
+\backslash
+ohm}$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Es varia progressivament la freqüència de l'entrada entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{100}{
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+ i 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{10}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename graph1.png
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-8-3"
+
+\end_inset
+
+ Resposta freqüencial del filtre actiu.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+8.3.
+ A la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-8-3"
+
+\end_inset
+
+ es pot veure l'evolució de l'amplitud de sortida.
+ S'observa que la freqüència central del filtre es situa al voltant de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+SI{700}{
+\backslash
+hertz}$
+\end_layout
+
+\end_inset
+
+ com s'esperava.
+\end_layout
+
+\begin_layout Section
+Muntatge i mesura de l'oscil·lador
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename osc-9-1.png
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-9-1"
+
+\end_inset
+
+ Captura de l'oscil·loscopi amb la sortida de l'oscil·lador sense estabilització.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+9.1.
+ La tensió a la sortida es pot veure a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-9-1"
+
+\end_inset
+
+.
+ S'observa una sinusoide de 
+freqüència 
+\lang spanish
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{710}{
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+ i 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{17.6}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ pic a pic, però tallada per la saturació de l'AO com s'espera ja que no
+ hi ha estabilització encara.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename osc-9-2.png
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-9-2"
+
+\end_inset
+
+ Captura de l'oscil·loscopi amb la sortida de l'oscil·lador amb estabilització.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+9.2.
+ La tensió a la sortida es pot veure a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-9-2"
+
+\end_inset
+
+.
+ S'observa una sinusoide de 
+freqüència 
+\lang spanish
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{721}{
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+, estabilitzada correctament a una tensió de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1.88}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ pic a pic.
 \end_layout
 
 \end_body
