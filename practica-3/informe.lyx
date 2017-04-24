@@ -1673,7 +1673,7 @@ Qüestió
 6.1.
  Quan ambdós díodes estan en tall, suposant l'AO com a ideal, tenim 
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1720,7 +1720,7 @@ $R_{ajust}$
 
 \end_inset
 
- s'afeigeix en paral·lel a 
+ s'afegeix en paral·lel a 
 \begin_inset ERT
 status open
 
@@ -1731,7 +1731,7 @@ $R_f$
 
 \end_inset
 
- i resulta que 
+ i en resulta que 
 \begin_inset ERT
 status open
 
@@ -1751,8 +1751,648 @@ num{2.53}$
 
 \end_deeper
 \begin_layout Standard
-A continuació es realitza una simulació temporal dels primers períodes de
- la sortida.
+A continuació es realitza una simulació d'escombrat DC amb els paràmetres
+ demanats.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q6-2-1.png
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q6-2-2.png
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-6-2"
+
+\end_inset
+
+ Relació entrada--sortida en contínua, per a l'etapa d'amplificació no lineal.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+6.2.
+ La tensió de sortida i la relació entrada--sortida en funció de l'entrada
+ es poden veure a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-6-2"
+
+\end_inset
+
+.
+ La relació entrada--sortida creua el 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+num{3}
+\end_layout
+
+\end_inset
+
+ per a una entrada de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{196}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ (quan 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{adjust} = 
+\backslash
+SI{50}{
+\backslash
+kilo
+\backslash
+ohm}$
+\end_layout
+
+\end_inset
+
+), 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{239}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ (quan 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{adjust} = 
+\backslash
+SI{75}{
+\backslash
+kilo
+\backslash
+ohm}$
+\end_layout
+
+\end_inset
+
+) i 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{300}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ (quan 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{adjust} = 
+\backslash
+SI{100}{
+\backslash
+kilo
+\backslash
+ohm}$
+\end_layout
+
+\end_inset
+
+).
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Quan 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$V_{i} 
+\backslash
+to 0$
+\end_layout
+
+\end_inset
+
+, la relació tendeix a infinit, la qual cosa hauria de portar a una arrencada
+ ràpida de l'oscil·lador.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Estabilització d'amplitud
+\end_layout
+
+\begin_layout Standard
+Ara s'introdueix i es simula el circuit oscil·lador juntament amb l'etapa
+ no lineal d'estabilització de l'amplitud.
+\end_layout
+
+\begin_layout Standard
+Es realitzen simulacions temporals dels primers períodes d'entrada i sortida,
+ per a cada valor de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{adjust}$
+\end_layout
+
+\end_inset
+
+, que es poden veure a les figures 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-7-1-1"
+
+\end_inset
+
+ i 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-7-1-2"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q7-1-1.png
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-7-1-1"
+
+\end_inset
+
+ Sortida de l'oscil·lador amb etapa estabilitzadora d'amplitud no lineal.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q7-1-2.png
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-7-1-2"
+
+\end_inset
+
+ Sortida i entrada de l'oscil·lador amb etapa estabilitzadora d'amplitud
+ no lineal.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+7.1.
+ Els valors d'amplitud de l'entrada no coincideixen del tot amb els punts
+ de tall obtinguts en la qüestió anterior però s'hi apropen: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{226}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ (quan 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{adjust} = 
+\backslash
+SI{50}{
+\backslash
+kilo
+\backslash
+ohm}$
+\end_layout
+
+\end_inset
+
+), 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{276}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ (quan 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{adjust} = 
+\backslash
+SI{75}{
+\backslash
+kilo
+\backslash
+ohm}$
+\end_layout
+
+\end_inset
+
+) i 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{343}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ (quan 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{adjust} = 
+\backslash
+SI{100}{
+\backslash
+kilo
+\backslash
+ohm}$
+\end_layout
+
+\end_inset
+
+).
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+La tensió de sortida que s'aconsegueix és de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{667.5}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ (quan 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{adjust} = 
+\backslash
+SI{50}{
+\backslash
+kilo
+\backslash
+ohm}$
+\end_layout
+
+\end_inset
+
+), 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{822.8}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ (quan 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{adjust} = 
+\backslash
+SI{75}{
+\backslash
+kilo
+\backslash
+ohm}$
+\end_layout
+
+\end_inset
+
+) i 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1037.7}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ (quan 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$R_{adjust} = 
+\backslash
+SI{100}{
+\backslash
+kilo
+\backslash
+ohm}$
+\end_layout
+
+\end_inset
+
+).
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+A continuació es simulen molts més períodes i es calcula la DFT.
+ Els resultats es poden veure a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-7-2"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide true
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset space \hspace{}
+\length -0.9cm
+\end_inset
+
+
+\begin_inset Graphics
+	filename q7-2.png
+	display false
+	width 108line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-7-2"
+
+\end_inset
+
+ DFT de la sortida de l'oscil·lador amb etapa estabilitzadora d'amplitud
+ no lineal.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+7.2.
+ Es pot apreciar com la distorsió harmònica és molt menor que en l'oscil·lador
+ sense l'etapa estabilitzadora.
 \end_layout
 
 \begin_layout Section
@@ -1851,7 +2491,9 @@ status open
 
 \begin_layout Plain Layout
 
-$R_{ajust} = 
+$R_{ajust} 
+\backslash
+simeq 
 \backslash
 SI{9.2}{
 \backslash
@@ -1905,18 +2547,13 @@ hertz}
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
-\begin_inset space \hspace{}
-\length -0.9cm
-\end_inset
-
-
 \begin_inset Graphics
 	filename graph1.png
 	display false
-	width 108line%
+	width 100line%
 
 \end_inset
 
@@ -1982,6 +2619,13 @@ hertz}$
  com s'esperava.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
 Muntatge i mesura de l'oscil·lador
 \end_layout
@@ -1990,18 +2634,13 @@ Muntatge i mesura de l'oscil·lador
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
-\begin_inset space \hspace{}
-\length -0.9cm
-\end_inset
-
-
 \begin_inset Graphics
-	filename osc-9-1.png
+	filename osc-9-1.proc.png
 	display false
-	width 108line%
+	width 100line%
 
 \end_inset
 
@@ -2049,10 +2688,7 @@ reference "fig:ex-9-1"
 \end_inset
 
 .
- S'observa una sinusoide de 
-freqüència 
-\lang spanish
-
+ S'observa una sinusoide de freqüència 
 \begin_inset ERT
 status open
 
@@ -2090,18 +2726,13 @@ volt}
 \begin_inset Float figure
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
-\begin_inset space \hspace{}
-\length -0.9cm
-\end_inset
-
-
 \begin_inset Graphics
-	filename osc-9-2.png
+	filename osc-9-2.proc.png
 	display false
-	width 108line%
+	width 100line%
 
 \end_inset
 
@@ -2149,10 +2780,7 @@ reference "fig:ex-9-2"
 \end_inset
 
 .
- S'observa una sinusoide de 
-freqüència 
-\lang spanish
-
+ S'observa una sinusoide de freqüència 
 \begin_inset ERT
 status open
 
