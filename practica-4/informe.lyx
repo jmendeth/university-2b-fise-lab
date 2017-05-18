@@ -1376,7 +1376,502 @@ Muntatge i caracterització del generador de referència de temps
 \end_layout
 
 \begin_layout Standard
-TODO
+Es munta el circuit demanat, s'alimenta i es visualitza la sortida en l'oscil·lo
+scopi.
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+1.
+ Variant el potenciòmetre, podem aconseguir una freqüència entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{6.3}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+ i 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{19.4}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+S'ajusta la freqüència a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{17}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+ amb el potenciòmetre.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename q3-2.png
+	display false
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-3-2"
+
+\end_inset
+
+ Senyal de sortida del generador de clock, ajustat a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{17}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+2.
+ La captura de l'oscil·loscopi es pot veure a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-3-2"
+
+\end_inset
+
+.
+ S'observa un senyal quadrat, amb tensió baixa 
+(
+\lang spanish
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{0}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+) durant 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{36.5}{
+\backslash
+micro
+\backslash
+second}
+\end_layout
+
+\end_inset
+
+ i amb tensió alta (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{12}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+) durant 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{22.3}{
+\backslash
+micro
+\backslash
+second}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+3.
+ El cicle de treball del senyal és 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+frac{
+\backslash
+SI{22.3}{
+\backslash
+micro
+\backslash
+second}}{
+\backslash
+SI{36.5}{
+\backslash
+micro
+\backslash
+second} + 
+\backslash
+SI{22.3}{
+\backslash
+micro
+\backslash
+second}} = 
+\backslash
+SI{37.9}{
+\backslash
+percent}$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Integració de tot el sistema
+\end_layout
+
+\begin_layout Standard
+Es connecta la placa a la resta del sistema, es connecten els condensadors
+ de desacoblament que faltaven i s'alimenta tot el conjunt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename q3-4-1.png
+	display false
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Captura amb un obstacle a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{0.5}{
+\backslash
+meter}
+\end_layout
+
+\end_inset
+
+ (lectura: 
+\family typewriter
+050
+\family default
+).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename q3-4-2.png
+	display false
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Captura amb un obstacle a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+meter}
+\end_layout
+
+\end_inset
+
+ (lectura: 
+\family typewriter
+100
+\family default
+).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-3-4"
+
+\end_inset
+
+ Captura de l'oscil·loscopi mostrant els senyals de de 
+\family sans
+START
+\family default
+ (a dalt) i 
+\family sans
+STOP
+\family default
+ (a sota), per a diferents distàncies de l'obstacle.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+4.
+ S'apunta amb les càpsules a un obstacle a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{50}{
+\backslash
+centi
+\backslash
+meter}
+\end_layout
+
+\end_inset
+
+, i es visualitza el senyal de 
+\family sans
+START
+\family default
+ i 
+\family sans
+STOP
+\family default
+ als dos canals de l'oscil·loscopi.
+ A continuació es repeteix el procés, però ara amb una distància de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+meter}
+\end_layout
+
+\end_inset
+
+.
+ Les captures en ambdues situacions es poden veure a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-3-4"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+5.
+ Experimentalment es determina que, amb aquestes càpsules, el sistema té
+ un abast d'aproximadament 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{173}{
+\backslash
+centi
+\backslash
+meter}
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \end_body
