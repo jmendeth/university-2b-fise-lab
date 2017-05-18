@@ -1,0 +1,1383 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass tufte-handout
+\begin_preamble
+\usepackage[parfill]{parskip}
+\usepackage{mathtools}
+\usepackage{siunitx}
+\usepackage{circuitikz}
+\usepackage{nicefrac}
+\end_preamble
+\options a4paper
+\use_default_options true
+\begin_modules
+customHeadersFooters
+enumitem
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format pdf2
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen false
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder false
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "linkcolor=black, citecolor=black, urlcolor=blue, filecolor=blue, pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize a4paper
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\notefontcolor #0000ff
+\branch Pregunta
+\selected 1
+\filename_suffix 0
+\color #00ff00
+\end_branch
+\branch Respuesta
+\selected 0
+\filename_suffix 0
+\color #aa55ff
+\end_branch
+\index Índice
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\quotes_language french
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict true
+\end_header
+
+\begin_body
+
+\begin_layout Title
+FISE QP2016, grup 52-5
+\begin_inset Newline newline
+\end_inset
+
+Informe práctica 4
+\end_layout
+
+\begin_layout Author
+Àlex Eslava
+\begin_inset Newline newline
+\end_inset
+
+Xavier Mendez
+\end_layout
+
+\begin_layout Date
+14 de maig de 2017
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+parskip}{
+\backslash
+medskipamount}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+setlength{
+\backslash
+parindent}{0pt}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part
+Sessió 1: Principi de mesura i circuit receptor
+\end_layout
+
+\begin_layout Section
+Comprovació experimental del principi de mesura
+\end_layout
+
+\begin_layout Standard
+Es configura el generador de funcions com es demana, i es connecten ambdues
+ càpsules.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename q1-1.proc.png
+	display false
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-1-1"
+
+\end_inset
+
+ Senyal rebut per la càpsula amb un obstacle a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{0.5}{
+\backslash
+meter}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+1.
+ S'apunta a la caixa a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{0.5}{
+\backslash
+meter}
+\end_layout
+
+\end_inset
+
+ i es visualitzen els senyals de les càpsules a l'oscil·loscopi.
+ La captura es pot veure a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-1-1"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+2.
+ Amb una entrada a la càpsula emissora de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{10}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+, l'eco que es rep a la càpsula receptora només arriba als 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{96}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ pic a pic.
+ El TOF resulta de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{3.02}{
+\backslash
+milli
+\backslash
+second}
+\end_layout
+
+\end_inset
+
+, que coincideix bé amb el teòric: 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{2.94}{
+\backslash
+milli
+\backslash
+second}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Connexió de l'amplificador
+\end_layout
+
+\begin_layout Standard
+Ara es connecta el senyal de recepció a l'amplificador de la P1, i es visualitza
+ el senyal de sortida d'aquest.
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+3.
+ El senyal de sortida en les mateixes condicions arriba ara a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{10}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ d'amplitud pic a pic (el AO se satura).
+\end_layout
+
+\begin_layout Section
+Muntatge i caracterització del detector d'envolupant
+\end_layout
+
+\begin_layout Standard
+Es munta el circuit detector d'envolupant i es connecta adequadament.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename q1-4.proc.png
+	display false
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-1-4"
+
+\end_inset
+
+ Sortida del detector d'envolvent quan s'apunta al sostre.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+4.
+ Es visualitza el senyal de sortida del detector d'envolupant quan s'apunta
+ al sostre.
+ La captura de l'oscil·loscopio es pot veure a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-1-4"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Muntatge i caracterització del detector de nivell
+\end_layout
+
+\begin_layout Standard
+Es munta el circuit detector de nivell, i es connecta al generador de funcions
+ amb sortida sinusoidal d'uns quants volts d'amplitud.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename q1-5.png
+	display false
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-1-5"
+
+\end_inset
+
+ Característica entrada--sortida del detector de nivell muntat.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+5.
+ S'activa el mode XY al generador de funcions per a visualitzar la característic
+a entrada--sortida del detector de nivell.
+ La captura de l'oscil·loscopi es pot veure a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-1-5"
+
+\end_inset
+
+.
+ S'observa clarament la funció de comparador, i els dos llindars diferenciats
+ (histèresi).
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+6.
+ Ajustant el cursor del potenciòmetre variem el llindar (és a dir, el centre
+ del cicle d'histèresi).
+\end_layout
+
+\begin_layout Standard
+Ara connectem l'entrada del detector de nivell a la sortida del detector
+ d'envolupant.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename q1-7.proc.png
+	display false
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-1-7"
+
+\end_inset
+
+ Sortida del detector de nivell quan s'apunta a un obstacle a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+meter}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+7.
+ Apuntem a un obstacle a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{1}{
+\backslash
+meter}
+\end_layout
+
+\end_inset
+
+ i visualitzem la sortida del detector de nivell.
+ La captura de l'oscil·loscopi es pot veure a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-1-7"
+
+\end_inset
+
+.
+ S'observa que l'eco rebut es detecta correctament.
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+8.
+ El TOF mesurat en l'oscil·loscopi es de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{6.00}{
+\backslash
+milli
+\backslash
+second}
+\end_layout
+
+\end_inset
+
+, que coincideix força amb el teòric de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{5.88}{
+\backslash
+milli
+\backslash
+second}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Part
+Sessió 2: Circuit transmissor
+\end_layout
+
+\begin_layout Section
+Muntatge i caracterització del generador de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{40}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Es munta el circuit demanat, s'alimenta i es visualitza la sortida en l'oscil·lo
+scopi.
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+1.
+ Variant el potenciòmetre podem aconseguir freqüències entre 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{38}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+ i 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{46}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+S'ajusta la freqüència a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{40}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename q2-2.png
+	display false
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-2-2"
+
+\end_inset
+
+ Sortida de l'oscil·lador amb la freqüència ajustada.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+2.
+ La captura de l'oscil·loscopi amb el senyal de sortida es pot veure a la
+ figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-2-2"
+
+\end_inset
+
+.
+ Es tracta d'un senyal quadrat com s'esperava, amb una tensió baixa (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{0}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+) durant 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{12.4}{
+\backslash
+micro
+\backslash
+second}
+\end_layout
+
+\end_inset
+
+ i una tensió alta (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{12}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+) durant 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{12.6}{
+\backslash
+micro
+\backslash
+second}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+3.
+ El cicle de treball del senyal és de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$
+\backslash
+SI{12.6}{
+\backslash
+micro
+\backslash
+second} 
+\backslash
+cdot 
+\backslash
+SI{40.07}{
+\backslash
+kilo
+\backslash
+hertz} = 
+\backslash
+SI{50.5}{
+\backslash
+percent}$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Muntatge i caracterització del circuit patró de repetició de polsos
+\end_layout
+
+\begin_layout Standard
+Es munta el circuit demanat, s'alimenta i es visualitza la sortida en l'oscil·lo
+scopi.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename q2-4.png
+	display false
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-2-4"
+
+\end_inset
+
+ Sortida del circuit patró amb el cursor a la meitat.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+4.
+ S'estableix el cursor aproximadament en la meitat del seu recorregut.
+ La captura de l'oscil·loscopi es pot veure a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-2-4"
+
+\end_inset
+
+.
+ El senyal es troba sempre baix (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{0}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+) excepte durant el pols de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{250}{
+\backslash
+micro
+\backslash
+second}
+\end_layout
+
+\end_inset
+
+ que es situa a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{12}{
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+S'ajusta el potenciòmetre perquè la durada del pols sigui de deu cicles
+ de l'oscil·lador.
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+5.
+ La duració del pols és de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{250}{
+\backslash
+micro
+\backslash
+second}
+\end_layout
+
+\end_inset
+
+.
+ Els polsos es repeteixen cada 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{40}{
+\backslash
+milli
+\backslash
+second}
+\end_layout
+
+\end_inset
+
+, i per tant 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$PRF = 
+\backslash
+SI{25}{
+\backslash
+hertz}$
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Verificació del senyal d'excitació de la càpsula transmissora
+\end_layout
+
+\begin_layout Standard
+A continuació es connecta la sortida de l'últim circuit al pin 
+\emph on
+reset
+\emph default
+ de l'oscil·lador, i es visualitza la sortida d'aquest últim en l'oscil·loscopi.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename q2-6.png
+	display false
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-2-6"
+
+\end_inset
+
+ Sortida de l'oscil·lador integrat amb el generador de patró.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+6.
+ La captura de l'oscil·loscopi es pot veure a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-2-6"
+
+\end_inset
+
+.
+ S'aprecien uns 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+num{10}
+\end_layout
+
+\end_inset
+
+ cicles en la salva, a una freqüència d'aproximadament 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{40}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+ com s'esperava.
+ Les salves es repeteixen cada 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{40}{
+\backslash
+milli
+\backslash
+second}
+\end_layout
+
+\end_inset
+
+, per tant a una freqüència de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{25}{
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ara es coloca un condensador de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{100}{
+\backslash
+nano
+\backslash
+farad}
+\end_layout
+
+\end_inset
+
+ en sèrie amb la càpsula transmissora i es connecta això a la sortida del
+ circuit transmissor.
+ Es visualitzen les tensions d'ambdues càpsules en l'oscil·loscopi.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename q2-7.png
+	display false
+	width 100line%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ex-2-7"
+
+\end_inset
+
+ Senyal en terminals de les dues càpsules amb l'oscil·lador integrat.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Qüestió
+\begin_inset space ~
+\end_inset
+
+7.
+ S'apunta a un obstacle a 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{0.5}{
+\backslash
+meter}
+\end_layout
+
+\end_inset
+
+ de distància.
+ La captura de l'oscil·loscopi es pot veure a la figura
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ex-2-7"
+
+\end_inset
+
+.
+ L'eco de la salva assoleix una tensió de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{35}{
+\backslash
+milli
+\backslash
+volt}
+\end_layout
+
+\end_inset
+
+ pic a pic, i té una freqüència de 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+SI{40}{
+\backslash
+kilo
+\backslash
+hertz}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Part
+Sessió 3: Mesura de temps i integració del sistema
+\end_layout
+
+\begin_layout Section
+Muntatge i caracterització del generador de referència de temps
+\end_layout
+
+\begin_layout Standard
+TODO
+\end_layout
+
+\end_body
+\end_document
